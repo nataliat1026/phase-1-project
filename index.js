@@ -9,15 +9,16 @@ const renderGallery = (charArr) => {
         const galleryDiv = document.querySelector('#image-gallery');
         const imageDiv = document.createElement('div');
         const img = document.createElement('img');
-        const imgText = document.createElement('div');
+        // const imgText = document.createElement('div');
         img.src = charObj.imageUrl;
         imageDiv.className = 'imgContainer';
         // imgText.textContent = charDetails(charObj);
         imageDiv.append(img);
         galleryDiv.append(imageDiv);
-        galleryDiv.append(imgText);
+        // galleryDiv.append(imgText);
         img.addEventListener('mouseover', () => enlargeImg(img))
         img.addEventListener('mouseleave', () => resetImg(img))
+        img.addEventListener('click', () => createModal(charObj))
     })
 }
 
@@ -27,6 +28,26 @@ const enlargeImg = (img) => {
 
 const resetImg = (img) => {
     img.style.opacity = '1';
+}
+
+const createModal = (charObj) => {
+    const modalCont = document.querySelector('#myModal');
+    const modalImg = document.querySelector('#img01');
+    const modalCap = document.querySelector('#caption');
+    const pName = document.createElement('p');
+    const pTitle = document.createElement('p');
+    const pHouse = document.createElement('p');
+    const span = document.querySelector('.close');
+    modalCont.style.display = 'block';
+    modalImg.src = charObj.imageUrl;
+    pName.textContent = charObj.fullName;
+    pTitle.textContent = charObj.title;
+    pHouse.textContent = charObj.family;
+    modalCap.append(pName, pTitle, pHouse);
+    span.addEventListener('click', () => {
+        modalCont.style.display = 'none';
+        modalCap.textContent = '';
+    })
 }
 
 
