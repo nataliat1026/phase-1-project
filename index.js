@@ -9,18 +9,16 @@ const renderGallery = (charArr) => {
         const galleryDiv = document.querySelector('#image-gallery');
         const imageDiv = document.createElement('div');
         const img = document.createElement('img');
-        // const imgText = document.createElement('div');
         img.src = charObj.imageUrl;
         imageDiv.className = 'imgContainer';
-        // imgText.textContent = charDetails(charObj);
         imageDiv.append(img);
         galleryDiv.append(imageDiv);
-        // galleryDiv.append(imgText);
         img.addEventListener('mouseover', () => enlargeImg(img))
         img.addEventListener('mouseleave', () => resetImg(img))
         img.addEventListener('click', () => createModal(charObj))
     })
 }
+
 
 const enlargeImg = (img) => {
     img.style.opacity = '0.7';
@@ -49,15 +47,4 @@ const createModal = (charObj) => {
         modalCap.textContent = '';
     })
 }
-
-
-
-
-// const charDetails = (charObj) => {
-//     return {
-//         'Full Name': `${charObj.fullName}`,
-//         'Title': `${charObj.title}`,
-//         'Family': `${charObj.family}`,
-//     }
-// }
 
