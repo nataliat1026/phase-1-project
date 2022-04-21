@@ -38,6 +38,7 @@ const createModal = (charObj) => {
     const pHouse = document.createElement('p');
     const close = document.querySelector('.close');
     const heart = document.querySelector('.heart');
+    const sword = document.querySelector('.swords');
     
     modalCont.style.display = 'block';
     modalImg.src = charObj.imageUrl;
@@ -52,6 +53,8 @@ const createModal = (charObj) => {
         modalCap.textContent = '';
     })
    heart.addEventListener('click', ()=>renderFavs())
+   sword.addEventListener('click', ()=>renderKills())
+
 }
 
 
@@ -66,14 +69,19 @@ const renderFavs = () => {
    
     div.append(imgFav)
 
-    console.log(typeof div)
-    // if(imgFav === imgModal.src){
-    //     console.alert('Already in Favorites!')
-    // }else{
-    //     imgFav.src = imgModal.src
-    //     div.append(imgFav);
-    // }
+    modal.style.display = 'none';
+}
+
+const renderKills = () => {
+    const modal = document.querySelector('#myModal');
+    const div = document.querySelector('#killDiv');
+    const imgKill = document.createElement('img');
+    const imgModal = document.querySelector('#img01')
     
+    imgKill.src = imgModal.src
+    imgKill.id = 'imgKill'
+   
+    div.append(imgKill)
 
     modal.style.display = 'none';
 }
