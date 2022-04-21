@@ -57,6 +57,23 @@ const createModal = (charObj) => {
 
 const renderFavs = () => {
     const modal = document.querySelector('#myModal');
+    const div = document.querySelector('#favDiv');
+    const imgFav = document.createElement('img');
+    const imgModal = document.querySelector('#img01')
+    
+    imgFav.src = imgModal.src
+    imgFav.id = 'imgFav'
+   
+    div.append(imgFav)
+
+    console.log(typeof div)
+    // if(imgFav === imgModal.src){
+    //     console.alert('Already in Favorites!')
+    // }else{
+    //     imgFav.src = imgModal.src
+    //     div.append(imgFav);
+    // }
+    
 
     modal.style.display = 'none';
 }

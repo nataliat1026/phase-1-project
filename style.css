@@ -36,7 +36,12 @@ img {
   object-fit: cover;
   margin: 5px;
 }
-
+#imgFav{
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  margin: 5px;
+}
 
 
 /* The Modal (background) */
