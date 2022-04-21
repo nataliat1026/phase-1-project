@@ -4,7 +4,7 @@
 
 body {
   margin: 0 auto;
-  width: 80%;
+  width: 90%;
 }
 
 
@@ -27,7 +27,7 @@ h1 {
   padding: 5px;
   justify-content: space-evenly;
   width: 80%;
-  /* position: relative; */
+
 }
 
 img {
@@ -55,37 +55,76 @@ img {
 }
 
   /* Modal Content (Image) */
-  .modal-content {
-    margin: auto;
-    display: block;
-    width: 80%;
-    height: 80%;
-    max-width: 700px;
-  }
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  height: 80%;
+  max-width: 700px;
+}
   
   /* Caption of Modal Image (Image Text) - Same Width as the Image */
-  #caption {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-    text-align: center;
-    color: #ccc;
-    padding: 10px 0;
-    height: 150px;
-    font-size: 2rem;
-    line-height: 1rem;
-  }
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+  font-size: 2rem;
+  line-height: 1rem;
+}
 
 /* The Close Button */
 .close {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: #f1f1f1;
-    font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s;
-  }
+  position: absolute;
+  top: 30px;
+  right: 60px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
 
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+  
+.heart {
+  position: absolute;
+  bottom: 120px;
+  left: 500px;
+  transition: 0.3s;
+}
 
+.heart img {
+  width: 6rem;
+  height: 6rem;
+}
+
+.heart:hover,
+.heart:focus {
+  cursor: pointer;
+}
+
+.swords {
+  position: absolute;
+  bottom: 120px;
+  right: 500px;
+  transition: 0.3s;
+}
+
+.swords img {
+  width: 6rem;
+  height: 6rem;
+}
+
+.swords:hover,
+.swords:focus {
+  cursor: pointer;
+}
