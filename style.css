@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Kings&family=MedievalSharp&display=swap');
+
+
 * {
   box-sizing: border-box;
 }
@@ -6,7 +9,17 @@ body {
   margin: 0 auto;
   width: 90%;
 }
-
+header{
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 2rem;
+}
+.headerImg {
+  margin: 0 auto;
+  max-width: 75%;
+  align-items: center;
+}
 
 #bodyContainer {
   display: flex;
@@ -16,8 +29,10 @@ body {
 
 
 h1 {
+  font-family: 'Cinzel Decorative';
   margin: 0 auto;
   text-align: center;
+  font-size: 3.5rem;
 }
 .favs {
   text-align: left;
@@ -37,6 +52,10 @@ h1 {
   width: 80%;
 }
 #bodyContainer #favDiv {
+  font-family: 'MedievalSharp';
+  font-size: 2.5rem;
+  text-align: center;
+  line-height: 2rem;
   display: flex;
   margin: 0 auto;
   flex-wrap: wrap;
@@ -47,7 +66,10 @@ h1 {
   height: min-content;
 }
 #bodyContainer #killDiv {
-  text-align: right;
+  font-family: 'Kings';
+  font-size: 2.5rem;
+  text-align: center;
+  line-height: 2rem;
   display: flex;
   margin: 0 auto;
   flex-wrap: wrap;
@@ -59,7 +81,7 @@ h1 {
 }
 
 
-img {
+.firstRender {
   width: 250px;
   height: 300px;
   object-fit: cover;
