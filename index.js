@@ -67,6 +67,7 @@ const renderFavs = () => {
     const div = document.querySelector('#favDiv');
     const imgFav = document.createElement('img');
     const imgModal = document.querySelector('#img01')
+    const modalCap = document.querySelector('#caption');
     
     imgFav.src = imgModal.src
     imgFav.id = 'imgFav'
@@ -82,6 +83,7 @@ const renderKills = () => {
     const div = document.querySelector('#killDiv');
     const imgKill = document.createElement('img');
     const imgModal = document.querySelector('#img01')
+    const modalCap = document.querySelector('#caption');
     
     imgKill.src = imgModal.src
     imgKill.id = 'imgKill'
