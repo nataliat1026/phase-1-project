@@ -9,10 +9,12 @@ const renderGallery = (charArr) => {
         const galleryDiv = document.querySelector('#image-gallery');
         const imageDiv = document.createElement('div');
         const img = document.createElement('img');
+        
         img.src = charObj.imageUrl;
         imageDiv.className = 'imgContainer';
         imageDiv.append(img);
         galleryDiv.append(imageDiv);
+        
         img.addEventListener('mouseover', () => enlargeImg(img))
         img.addEventListener('mouseleave', () => resetImg(img))
         img.addEventListener('click', () => createModal(charObj))
@@ -36,23 +38,25 @@ const createModal = (charObj) => {
     const pHouse = document.createElement('p');
     const close = document.querySelector('.close');
     const heart = document.querySelector('.heart');
+    
     modalCont.style.display = 'block';
     modalImg.src = charObj.imageUrl;
     pName.textContent = charObj.fullName;
     pTitle.textContent = charObj.title;
     pHouse.textContent = charObj.family;
+    
     modalCap.append(pName, pTitle, pHouse);
+    
     close.addEventListener('click', () => {
         modalCont.style.display = 'none';
         modalCap.textContent = '';
     })
-    heart.addEventListener('click', () => {
-        modalCont.style.display = 'none';
-        const favDiv = document.querySelector('#favDiv');
-        const favImg = document.createElement('img');
-        favImg.src = modalImg.src;
-        console.log(favImg);
-        favDiv.append(favImg);
+   heart.addEventListener('click', ()=>renderFavs())
+}
 
-    })
+
+const renderFavs = () => {
+    const modal = document.querySelector('#myModal');
+
+    modal.style.display = 'none';
 }
