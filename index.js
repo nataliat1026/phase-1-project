@@ -58,6 +58,8 @@ const createModal = (charObj) => {
 }
 
 
+
+
 const renderFavs = () => {
     const modal = document.querySelector('#myModal');
     const div = document.querySelector('#favDiv');
