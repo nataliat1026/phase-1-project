@@ -74,6 +74,7 @@ const renderFavs = () => {
     div.append(imgFav)
 
     modal.style.display = 'none';
+    modalCap.textContent = '';
 }
 
 const renderKills = () => {
@@ -88,4 +89,5 @@ const renderKills = () => {
     div.append(imgKill)
 
     modal.style.display = 'none';
+    modalCap.textContent = '';
 }
