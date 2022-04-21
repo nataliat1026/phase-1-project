@@ -62,9 +62,6 @@ const createModal = (charObj) => {
 
 }
 
-
-
-
 const renderFavs = () => {
     const modal = document.querySelector('#myModal');
     const div = document.querySelector('#favDiv');
@@ -111,9 +108,9 @@ const addKillToGallery = (galleryDiv, imgKill) => {
     galleryHolder.prepend(galleryDiv)
     
 }
+
 const addFavToGallery = (galleryDiv, imgFav) => {
     const galleryHolder = document.querySelector('#image-gallery');
     imgFav.remove()
     galleryHolder.prepend(galleryDiv)
-    
 }
