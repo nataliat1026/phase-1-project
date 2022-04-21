@@ -127,6 +127,7 @@ h1 {
   
   /* Caption of Modal Image (Image Text) - Same Width as the Image */
 #caption {
+  font-family: 'Cinzel Decorative';
   margin: auto;
   display: block;
   width: 80%;
