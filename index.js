@@ -10,6 +10,7 @@ const renderGallery = (charArr) => {
         const imageDiv = document.createElement('div');
         const img = document.createElement('img');
         
+        
         img.className = 'firstRender'
 
         img.src = charObj.imageUrl;
@@ -20,7 +21,13 @@ const renderGallery = (charArr) => {
         img.addEventListener('mouseover', () => enlargeImg(img))
         img.addEventListener('mouseleave', () => resetImg(img))
         img.addEventListener('click', () => createModal(charObj))
+        
     })
+    const heart = document.querySelector('.heart');
+    const sword = document.querySelector('.swords');
+    
+    heart.addEventListener('click', ()=>renderFavs());
+    sword.addEventListener('click', ()=>renderKills());
 }
 
 const enlargeImg = (img) => {
@@ -39,8 +46,6 @@ const createModal = (charObj) => {
     const pTitle = document.createElement('p');
     const pHouse = document.createElement('p');
     const close = document.querySelector('.close');
-    const heart = document.querySelector('.heart');
-    const sword = document.querySelector('.swords');
     
     modalCont.style.display = 'block';
     modalImg.src = charObj.imageUrl;
@@ -54,8 +59,6 @@ const createModal = (charObj) => {
         modalCont.style.display = 'none';
         modalCap.textContent = '';
     })
-   heart.addEventListener('click', ()=>renderFavs())
-   sword.addEventListener('click', ()=>renderKills())
 
 }
 
@@ -84,7 +87,7 @@ const renderKills = () => {
     const imgKill = document.createElement('img');
     const imgModal = document.querySelector('#img01')
     const modalCap = document.querySelector('#caption');
-    
+
     imgKill.src = imgModal.src
     imgKill.id = 'imgKill'
    
