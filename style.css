@@ -19,16 +19,45 @@ h1 {
   margin: 0 auto;
   text-align: center;
 }
+.favs {
+  text-align: left;
+}
 
-.container {
+.dead{
+  text-align: right;
+}
+
+#bodyContainer #image-gallery {
+  display: flex;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  align-content: center;
+  padding: 5px;
+  justify-content: space-evenly;
+  width: 80%;
+}
+#bodyContainer #favDiv {
   display: flex;
   margin: 0 auto;
   flex-wrap: wrap;
   padding: 5px;
-  justify-content: space-evenly;
-  width: 80%;
-
+  justify-content:center;
+  flex-direction: row;
+  width: 10%;
+  height: min-content;
 }
+#bodyContainer #killDiv {
+  text-align: right;
+  display: flex;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  padding: 5px;
+  justify-content:center;
+  flex-direction: row;
+  width: 10%;
+  height: min-content;
+}
+
 
 img {
   width: 250px;
@@ -36,7 +65,18 @@ img {
   object-fit: cover;
   margin: 5px;
 }
-
+#imgFav{
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
+  margin: 5px;
+}
+#imgKill{
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
+  margin: 5px;
+}
 
 
 /* The Modal (background) */
