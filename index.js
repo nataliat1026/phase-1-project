@@ -74,10 +74,13 @@ const renderFavs = () => {
     const modalCap = document.querySelector('#caption');
     const galleryDiv = document.getElementById(`${modalCap.firstChild.innerText}`)
     
-    galleryDiv.remove()
+    
+    
     imgFav.src = imgModal.src
     imgFav.id = 'imgFav'
    
+    imgFav.addEventListener('click', ()=>addFavToGallery(galleryDiv, imgFav))
+    galleryDiv.remove()
     div.append(imgFav)
 
     modal.style.display = 'none';
@@ -91,14 +94,27 @@ const renderKills = () => {
     const imgModal = document.querySelector('#img01')
     const modalCap = document.querySelector('#caption');
     const galleryDiv = document.getElementById(`${modalCap.firstChild.innerText}`)
-    
-    galleryDiv.remove()
+   
     imgKill.src = imgModal.src
     imgKill.id = 'imgKill'
    
-    
+    imgKill.addEventListener('click', ()=>addKillToGallery(galleryDiv, imgKill))
+    galleryDiv.remove()
     div.append(imgKill)
 
     modal.style.display = 'none';
     modalCap.textContent = '';
+}
+
+const addKillToGallery = (galleryDiv, imgKill) => {
+    const galleryHolder = document.querySelector('#image-gallery');
+    imgKill.remove()
+    galleryHolder.prepend(galleryDiv)
+    
+}
+const addFavToGallery = (galleryDiv, imgFav) => {
+    const galleryHolder = document.querySelector('#image-gallery');
+    imgFav.remove()
+    galleryHolder.prepend(galleryDiv)
+    
 }

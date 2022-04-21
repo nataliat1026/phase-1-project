@@ -66,6 +66,7 @@ h1 {
   height: min-content;
 }
 #bodyContainer #killDiv {
+  position: relative;
   font-family: 'Kings';
   font-size: 2.5rem;
   text-align: center;
@@ -94,10 +95,22 @@ h1 {
   margin: 5px;
 }
 #imgKill{
+  position:relative;
   width: 75px;
   height: 75px;
   object-fit: cover;
   margin: 5px;
+}
+
+.xOut {
+  top: 30px;
+  right: 60px;
+  position: absolute;
+  display: block;
+  cursor: pointer;
+  color: red;
+  font-size: 10px;
+  font-weight: bold;
 }
 
 
