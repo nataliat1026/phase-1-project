@@ -10,6 +10,8 @@ const renderGallery = (charArr) => {
         const imageDiv = document.createElement('div');
         const img = document.createElement('img');
         
+        img.className = 'firstRender'
+
         img.src = charObj.imageUrl;
         imageDiv.className = 'imgContainer';
         imageDiv.append(img);
