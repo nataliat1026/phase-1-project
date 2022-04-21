@@ -15,6 +15,7 @@ const renderGallery = (charArr) => {
 
         img.src = charObj.imageUrl;
         imageDiv.className = 'imgContainer';
+        imageDiv.id = charObj.fullName
         imageDiv.append(img);
         galleryDiv.append(imageDiv);
         
@@ -71,7 +72,9 @@ const renderFavs = () => {
     const imgFav = document.createElement('img');
     const imgModal = document.querySelector('#img01')
     const modalCap = document.querySelector('#caption');
+    const galleryDiv = document.getElementById(`${modalCap.firstChild.innerText}`)
     
+    galleryDiv.remove()
     imgFav.src = imgModal.src
     imgFav.id = 'imgFav'
    
@@ -87,10 +90,13 @@ const renderKills = () => {
     const imgKill = document.createElement('img');
     const imgModal = document.querySelector('#img01')
     const modalCap = document.querySelector('#caption');
-
+    const galleryDiv = document.getElementById(`${modalCap.firstChild.innerText}`)
+    
+    galleryDiv.remove()
     imgKill.src = imgModal.src
     imgKill.id = 'imgKill'
    
+    
     div.append(imgKill)
 
     modal.style.display = 'none';
