@@ -10,7 +10,6 @@ const renderGallery = (charArr) => {
         const imageDiv = document.createElement('div');
         const img = document.createElement('img');
         
-        
         img.className = 'firstRender'
 
         img.src = charObj.imageUrl;
