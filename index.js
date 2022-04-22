@@ -39,8 +39,8 @@ const resetImg = (img) => {
 }
 
 const createModal = (charObj) => {
-    const modalCont = document.querySelector('#myModal');
-    const modalImg = document.querySelector('#img01');
+    const modalCont = document.querySelector('#modal');
+    const modalImg = document.querySelector('#charImg');
     const modalCap = document.querySelector('#caption');
     const pName = document.createElement('p');
     const pTitle = document.createElement('p');
@@ -59,18 +59,15 @@ const createModal = (charObj) => {
         modalCont.style.display = 'none';
         modalCap.textContent = '';
     })
-
 }
 
 const renderFavs = () => {
-    const modal = document.querySelector('#myModal');
+    const modal = document.querySelector('#modal');
     const div = document.querySelector('#favDiv');
     const imgFav = document.createElement('img');
-    const imgModal = document.querySelector('#img01')
+    const imgModal = document.querySelector('#charImg')
     const modalCap = document.querySelector('#caption');
     const galleryDiv = document.getElementById(`${modalCap.firstChild.innerText}`)
-    
-    
     
     imgFav.src = imgModal.src
     imgFav.id = 'imgFav'
@@ -84,10 +81,10 @@ const renderFavs = () => {
 }
 
 const renderKills = () => {
-    const modal = document.querySelector('#myModal');
+    const modal = document.querySelector('#modal');
     const div = document.querySelector('#killDiv');
     const imgKill = document.createElement('img');
-    const imgModal = document.querySelector('#img01')
+    const imgModal = document.querySelector('#charImg')
     const modalCap = document.querySelector('#caption');
     const galleryDiv = document.getElementById(`${modalCap.firstChild.innerText}`)
    
